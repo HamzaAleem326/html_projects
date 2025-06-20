@@ -12,281 +12,160 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
-            background: linear-gradient(135deg, #0d1117 0%, #161b22 25%, #21262d 50%, #1a1f26 75%, #0d1117 100%);
-            background-attachment: fixed;
-            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: #0d1117;
             color: #e6edf3;
             line-height: 1.6;
             padding: 20px;
         }
 
         .container {
-            max-width: 1600px;
+            max-width: 1200px;
             margin: 0 auto;
-            background: linear-gradient(145deg, #0d1117 0%, #161b22 50%, #21262d 100%);
-            border-radius: 20px;
-            box-shadow: 
-                0 0 0 1px rgba(240, 246, 252, 0.1),
-                0 16px 32px rgba(1, 4, 9, 0.85),
-                inset 0 1px 0 rgba(255, 255, 255, 0.04);
+            background-color: #161b22;
+            border-radius: 12px;
+            border: 1px solid #30363d;
             overflow: hidden;
-            backdrop-filter: blur(16px);
         }
 
         .header {
-            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 25%, #1e40af 50%, #6366f1 75%, #8b5cf6 100%);
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease infinite;
+            background-color: #21262d;
             color: white;
-            padding: 40px 30px;
+            padding: 30px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 100%);
-            pointer-events: none;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            border-bottom: 1px solid #30363d;
         }
 
         .header h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-            font-weight: 700;
-            letter-spacing: -0.02em;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #58a6ff;
         }
 
         .header p {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            font-weight: 400;
-            letter-spacing: 0.5px;
+            font-size: 1.1rem;
+            color: #8b949e;
         }
 
         .table-container {
             overflow-x: auto;
-            padding: 25px;
-            background: #0d1117;
+            padding: 20px;
         }
 
         table {
             width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            margin: 0 auto;
-            background: linear-gradient(145deg, #161b22 0%, #21262d 100%);
-            border-radius: 12px;
+            border-collapse: collapse;
+            background-color: #0d1117;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 
-                0 0 0 1px rgba(240, 246, 252, 0.08),
-                0 8px 24px rgba(1, 4, 9, 0.6);
-        }
-
-        thead {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 25%, #3b82f6 50%, #1e40af 75%, #6366f1 100%);
-            background-size: 400% 400%;
-            animation: gradientShift 10s ease infinite;
         }
 
         th {
-            padding: 24px 18px;
+            background-color: #21262d;
+            padding: 15px 12px;
             text-align: left;
             font-weight: 600;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-            color: white;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-        }
-
-        th::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #8b5cf6, #3b82f6, #8b5cf6);
-            opacity: 0.6;
-        }
-
-        tbody tr {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border-bottom: 1px solid rgba(240, 246, 252, 0.06);
-            background: linear-gradient(145deg, rgba(22, 27, 34, 0.6) 0%, rgba(33, 38, 45, 0.4) 100%);
-        }
-
-        tbody tr:hover {
-            background: linear-gradient(145deg, 
-                rgba(139, 92, 246, 0.08) 0%, 
-                rgba(59, 130, 246, 0.06) 50%, 
-                rgba(99, 102, 241, 0.08) 100%);
-            transform: translateY(-3px) scale(1.002);
-            box-shadow: 
-                0 8px 32px rgba(139, 92, 246, 0.15),
-                0 0 0 1px rgba(139, 92, 246, 0.2);
-        }
-
-        tbody tr:nth-child(even) {
-            background: linear-gradient(145deg, rgba(13, 17, 23, 0.4) 0%, rgba(22, 27, 34, 0.6) 100%);
+            color: #f0f6fc;
+            border-bottom: 1px solid #30363d;
         }
 
         td {
-            padding: 20px 18px;
+            padding: 15px 12px;
+            border-bottom: 1px solid #21262d;
             vertical-align: top;
-            border-right: 1px solid rgba(240, 246, 252, 0.06);
-            color: #e6edf3;
-            font-size: 0.95rem;
         }
 
-        td:last-child {
-            border-right: none;
+        tr:hover {
+            background-color: #161b22;
         }
 
         .recipe-name {
-            font-weight: 700;
-            font-size: 1.15rem;
+            font-weight: 600;
+            font-size: 1.1rem;
             color: #f0f6fc;
-            text-transform: capitalize;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .recipe-emoji {
-            font-size: 1.8rem;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
         }
 
         .cuisine {
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            background-color: #238636;
             color: white;
-            padding: 6px 14px;
-            border-radius: 20px;
+            padding: 4px 10px;
+            border-radius: 12px;
             font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
+            font-weight: 500;
             display: inline-block;
-            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
-            letter-spacing: 0.5px;
         }
 
         .cuisine.italian {
-            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+            background-color: #da3633;
         }
 
         .time {
-            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            background-color: #8957e5;
             color: white;
-            padding: 6px 12px;
-            border-radius: 16px;
-            font-size: 0.9rem;
-            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
             display: inline-block;
-            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
-            letter-spacing: 0.3px;
         }
 
-        ul, ol {
+        ul {
             margin: 0;
-            padding-left: 20px;
-        }
-
-        ul li, ol li {
-            margin: 8px 0;
-            line-height: 1.5;
-            color: #c9d1d9;
+            padding-left: 18px;
         }
 
         ul li {
-            list-style-type: none;
-            position: relative;
-            padding-left: 8px;
+            margin: 5px 0;
+            color: #c9d1d9;
+            font-size: 0.9rem;
         }
 
-        ul li::before {
-            content: "•";
-            position: absolute;
-            left: -16px;
-            top: 0;
-            color: #8b5cf6;
-            font-weight: bold;
-            font-size: 1.2rem;
+        ol {
+            margin: 0;
+            padding-left: 18px;
         }
 
         ol li {
-            margin: 10px 0;
-            font-size: 0.95rem;
-            line-height: 1.6;
+            margin: 6px 0;
             color: #c9d1d9;
-        }
-
-        ol li::marker {
-            color: #6366f1;
-            font-weight: bold;
+            font-size: 0.9rem;
+            line-height: 1.4;
         }
 
         .ingredients-cell {
-            background: linear-gradient(135deg, 
-                rgba(239, 68, 68, 0.08) 0%, 
-                rgba(220, 38, 38, 0.05) 100%);
-            border-left: 3px solid #ef4444;
-            backdrop-filter: blur(8px);
+            background-color: #0d1117;
+            border-left: 3px solid #3e33da;
         }
 
         .recipe-cell {
-            background: linear-gradient(135deg, 
-                rgba(59, 130, 246, 0.08) 0%, 
-                rgba(30, 64, 175, 0.05) 100%);
-            border-left: 3px solid #3b82f6;
-            backdrop-filter: blur(8px);
+            background-color: #0d1117;
+            border-left: 3px solid #58a6ff;
         }
 
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.2rem;
+            body {
+                padding: 10px;
             }
             
-            th, td {
-                padding: 16px 12px;
-                font-size: 0.9rem;
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
             }
             
             .table-container {
-                padding: 15px;
+                padding: 10px;
             }
-
-            .recipe-name {
-                font-size: 1rem;
-            }
-
-            .recipe-emoji {
-                font-size: 1.5rem;
+            
+            th, td {
+                padding: 12px 8px;
+                font-size: 0.9rem;
             }
         }
 
-        .section-emoji {
-            font-size: 1.3rem;
-            margin-right: 8px;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-        }
-
-        /* Smooth scrollbar for dark theme */
+        /* Simple scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -297,293 +176,251 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: #58a6ff;
             border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(135deg, #8b5cf6, #6366f1);
-        }
-
-        /* Subtle glow effects */
-        .glow {
-            animation: subtleGlow 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes subtleGlow {
-            from { 
-                box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
-            }
-            to { 
-                box-shadow: 0 0 30px rgba(139, 92, 246, 0.2);
-            }
         }
     </style>
 </head>
 <body>
-    <div class="container glow">
+    <div class="container">
         <div class="header">
-            <h1>🍽️ Flavor Chronicles</h1>
-            <p>A curated collection of beloved recipes from around the world</p>
+            <h1>🍽️ Recipe Collection</h1>
+            <p>Simple and delicious recipes from around the world</p>
         </div>
         
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th><span class="section-emoji">📖</span>Recipe</th>
-                        <th><span class="section-emoji">🌍</span>Origin</th>
-                        <th><span class="section-emoji">⏰</span>Prep</th>
-                        <th><span class="section-emoji">🔥</span>Cook</th>
-                        <th><span class="section-emoji">🛒</span>Ingredients</th>
-                        <th><span class="section-emoji">👨‍🍳</span>Method</th>
+                        <th>Recipe</th>
+                        <th>Origin</th>
+                        <th>Prep Time</th>
+                        <th>Cook Time</th>
+                        <th>Ingredients</th>
+                        <th>Instructions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="recipe-name">
-                            <span class="recipe-emoji">🍗</span>
-                            Chicken Karahi
-                        </td>
+                        <td class="recipe-name">🍗 Chicken Karahi</td>
                         <td><span class="cuisine">Pakistani</span></td>
                         <td><span class="time">20 mins</span></td>
                         <td><span class="time">35 mins</span></td>
                         <td class="ingredients-cell">
                             <ul>
-                                <li>Fresh chicken pieces</li>
-                                <li>Premium cooking oil</li>
-                                <li>Ripe tomatoes</li>
-                                <li>Fresh ginger paste</li>
-                                <li>Aromatic garlic</li>
-                                <li>Sea salt & traditional spices</li>
+                                <li>Chicken pieces</li>
+                                <li>Cooking oil</li>
+                                <li>Tomatoes</li>
+                                <li>Ginger paste</li>
+                                <li>Garlic</li>
+                                <li>Salt & spices</li>
                             </ul>
                         </td>
                         <td class="recipe-cell">
                             <ol>
-                                <li>Heat oil in traditional karahi until shimmering</li>
-                                <li>Add chicken pieces and sear until beautifully golden</li>
-                                <li>Stir in ginger-garlic paste until fragrant</li>
-                                <li>Add fresh tomatoes and cook until they break down</li>
-                                <li>Season with salt and authentic Pakistani spices</li>
-                                <li>Simmer until chicken is perfectly tender</li>
-                                <li>Garnish with fresh coriander and serve piping hot</li>
+                                <li>Heat oil in karahi</li>
+                                <li>Add chicken pieces and cook until golden</li>
+                                <li>Add ginger-garlic paste</li>
+                                <li>Add tomatoes and cook until soft</li>
+                                <li>Season with salt and spices</li>
+                                <li>Simmer until chicken is tender</li>
+                                <li>Garnish and serve hot</li>
                             </ol>
                         </td>
                     </tr>
                     
                     <tr>
-                        <td class="recipe-name">
-                            <span class="recipe-emoji">🍚</span>
-                            Chicken Biryani
-                        </td>
+                        <td class="recipe-name">🍚 Chicken Biryani</td>
                         <td><span class="cuisine">Pakistani</span></td>
                         <td><span class="time">30 mins</span></td>
                         <td><span class="time">45 mins</span></td>
                         <td class="ingredients-cell">
                             <ul>
-                                <li>Premium basmati rice</li>
-                                <li>Tender chicken pieces</li>
-                                <li>Thick Greek yogurt</li>
-                                <li>Golden fried onions</li>
-                                <li>Precious saffron threads</li>
-                                <li>Authentic biryani masala</li>
+                                <li>Basmati rice</li>
+                                <li>Chicken pieces</li>
+                                <li>Yogurt</li>
+                                <li>Fried onions</li>
+                                <li>Saffron</li>
+                                <li>Biryani masala</li>
                             </ul>
                         </td>
                         <td class="recipe-cell">
                             <ol>
-                                <li>Marinate chicken in spiced yogurt for deep flavor</li>
-                                <li>Parboil fragrant basmati rice with whole spices</li>
-                                <li>Cook marinated chicken until succulent and tender</li>
-                                <li>Create beautiful layers of rice and chicken</li>
-                                <li>Top with crispy fried onions and saffron milk</li>
-                                <li>Cook on dum (slow steam) for the perfect texture</li>
-                                <li>Rest before serving to allow flavors to meld</li>
+                                <li>Marinate chicken in spiced yogurt</li>
+                                <li>Parboil rice with whole spices</li>
+                                <li>Cook marinated chicken</li>
+                                <li>Layer rice and chicken</li>
+                                <li>Top with fried onions and saffron</li>
+                                <li>Cook on dum for 30 minutes</li>
+                                <li>Rest before serving</li>
                             </ol>
                         </td>
                     </tr>
                     
                     <tr>
-                        <td class="recipe-name">
-                            <span class="recipe-emoji">🍕</span>
-                            Margherita Pizza
-                        </td>
+                        <td class="recipe-name">🍕 Margherita Pizza</td>
                         <td><span class="cuisine italian">Italian</span></td>
                         <td><span class="time">15 mins</span></td>
                         <td><span class="time">12 mins</span></td>
                         <td class="ingredients-cell">
                             <ul>
-                                <li>Artisan pizza dough</li>
-                                <li>San Marzano tomato sauce</li>
-                                <li>Fresh mozzarella di bufala</li>
-                                <li>Garden-fresh basil leaves</li>
-                                <li>Extra virgin olive oil</li>
-                                <li>Sea salt & cracked pepper</li>
+                                <li>Pizza dough</li>
+                                <li>Tomato sauce</li>
+                                <li>Fresh mozzarella</li>
+                                <li>Fresh basil</li>
+                                <li>Olive oil</li>
+                                <li>Salt & pepper</li>
                             </ul>
                         </td>
                         <td class="recipe-cell">
                             <ol>
-                                <li>Preheat your oven to a blazing 475°F</li>
-                                <li>Gently stretch dough into a perfect circle</li>
-                                <li>Spread tomato sauce with love and care</li>
-                                <li>Tear fresh mozzarella into rustic chunks</li>
-                                <li>Season thoughtfully with salt and pepper</li>
-                                <li>Bake until edges are golden and cheese bubbles</li>
-                                <li>Finish with aromatic fresh basil</li>
+                                <li>Preheat oven to 475°F</li>
+                                <li>Stretch dough into circle</li>
+                                <li>Spread tomato sauce</li>
+                                <li>Add mozzarella chunks</li>
+                                <li>Season with salt and pepper</li>
+                                <li>Bake until golden and bubbly</li>
+                                <li>Top with fresh basil</li>
                             </ol>
                         </td>
                     </tr>
                     
                     <tr>
-                        <td class="recipe-name">
-                            <span class="recipe-emoji">☕</span>
-                            Masala Chai
-                        </td>
+                        <td class="recipe-name">☕ Masala Chai</td>
                         <td><span class="cuisine">Pakistani</span></td>
                         <td><span class="time">5 mins</span></td>
                         <td><span class="time">10 mins</span></td>
                         <td class="ingredients-cell">
                             <ul>
-                                <li>Premium black tea leaves</li>
-                                <li>Creamy whole milk</li>
-                                <li>Pure cane sugar</li>
-                                <li>Fragrant cardamom pods</li>
-                                <li>Ceylon cinnamon stick</li>
-                                <li>Fresh ginger root</li>
+                                <li>Black tea</li>
+                                <li>Milk</li>
+                                <li>Sugar</li>
+                                <li>Cardamom</li>
+                                <li>Cinnamon</li>
+                                <li>Fresh ginger</li>
                             </ul>
                         </td>
                         <td class="recipe-cell">
                             <ol>
-                                <li>Gently crush whole spices to release their essence</li>
-                                <li>Simmer water with tea leaves and aromatic spices</li>
-                                <li>Pour in rich milk when tea reaches perfect strength</li>
-                                <li>Sweeten to your heart's desire</li>
-                                <li>Let it bubble and dance for a few minutes</li>
-                                <li>Strain through fine mesh for silky smoothness</li>
-                                <li>Serve steaming hot in your favorite cups</li>
+                                <li>Crush spices lightly</li>
+                                <li>Boil water with tea and spices</li>
+                                <li>Add milk when tea is strong</li>
+                                <li>Add sugar to taste</li>
+                                <li>Let it boil for 2-3 minutes</li>
+                                <li>Strain the tea</li>
+                                <li>Serve hot</li>
                             </ol>
                         </td>
                     </tr>
                     
                     <tr>
-                        <td class="recipe-name">
-                            <span class="recipe-emoji">🍛</span>
-                            Daal Chawal
-                        </td>
+                        <td class="recipe-name">🍛 Daal Chawal</td>
                         <td><span class="cuisine">Pakistani</span></td>
                         <td><span class="time">15 mins</span></td>
                         <td><span class="time">30 mins</span></td>
                         <td class="ingredients-cell">
                             <ul>
-                                <li>Golden yellow lentils</li>
-                                <li>Aged basmati rice</li>
-                                <li>Sweet caramelized onions</li>
-                                <li>Vine-ripened tomatoes</li>
-                                <li>Vibrant turmeric powder</li>
-                                <li>Aromatic cumin seeds</li>
+                                <li>Yellow lentils</li>
+                                <li>Basmati rice</li>
+                                <li>Onions</li>
+                                <li>Tomatoes</li>
+                                <li>Turmeric</li>
+                                <li>Cumin seeds</li>
                             </ul>
                         </td>
                         <td class="recipe-cell">
                             <ol>
-                                <li>Rinse lentils until water runs crystal clear</li>
-                                <li>Cook basmati rice to fluffy perfection</li>
-                                <li>Simmer lentils with turmeric until creamy</li>
-                                <li>Create a fragrant tadka with cumin and onions</li>
-                                <li>Add tomatoes and cook until they melt away</li>
-                                <li>Combine the tadka with tender lentils</li>
-                                <li>Serve this comfort food with warm rice</li>
+                                <li>Wash and cook lentils</li>
+                                <li>Cook rice separately</li>
+                                <li>Add turmeric to lentils</li>
+                                <li>Make tadka with cumin and onions</li>
+                                <li>Add tomatoes to tadka</li>
+                                <li>Mix tadka with cooked lentils</li>
+                                <li>Serve with rice</li>
                             </ol>
                         </td>
                     </tr>
                     
                     <tr>
-                        <td class="recipe-name">
-                            <span class="recipe-emoji">🥘</span>
-                            Shami Kabab
-                        </td>
+                        <td class="recipe-name">🥘 Shami Kabab</td>
                         <td><span class="cuisine">Pakistani</span></td>
                         <td><span class="time">25 mins</span></td>
                         <td><span class="time">20 mins</span></td>
                         <td class="ingredients-cell">
                             <ul>
-                                <li>Premium minced meat</li>
-                                <li>Split chickpeas (chana dal)</li>
-                                <li>Caramelized onions</li>
-                                <li>Farm-fresh eggs</li>
-                                <li>Kashmiri red chili powder</li>
-                                <li>Homemade garam masala</li>
+                                <li>Minced meat</li>
+                                <li>Split chickpeas</li>
+                                <li>Onions</li>
+                                <li>Eggs</li>
+                                <li>Red chili powder</li>
+                                <li>Garam masala</li>
                             </ul>
                         </td>
                         <td class="recipe-cell">
                             <ol>
-                                <li>Slow-cook mince with dal and warming spices</li>
-                                <li>Allow the mixture to cool and develop flavors</li>
-                                <li>Grind to a smooth, cohesive paste</li>
-                                <li>Bind with beaten egg for perfect texture</li>
-                                <li>Shape into elegant, uniform patties</li>
-                                <li>Pan-fry until golden and crispy outside</li>
-                                <li>Serve hot with cooling mint chutney</li>
+                                <li>Cook mince with dal and spices</li>
+                                <li>Let mixture cool completely</li>
+                                <li>Grind to smooth paste</li>
+                                <li>Add beaten egg</li>
+                                <li>Shape into patties</li>
+                                <li>Shallow fry until golden</li>
+                                <li>Serve with chutney</li>
                             </ol>
                         </td>
                     </tr>
                     
                     <tr>
-                        <td class="recipe-name">
-                            <span class="recipe-emoji">🍢</span>
-                            Chicken Tikka
-                        </td>
+                        <td class="recipe-name">🍢 Chicken Tikka</td>
                         <td><span class="cuisine">Pakistani</span></td>
                         <td><span class="time">120 mins</span></td>
                         <td><span class="time">15 mins</span></td>
                         <td class="ingredients-cell">
                             <ul>
-                                <li>Boneless chicken cubes</li>
-                                <li>Thick strained yogurt</li>
-                                <li>Fresh lemon juice</li>
-                                <li>Aromatic ginger-garlic paste</li>
-                                <li>Vibrant red chili powder</li>
-                                <li>Special tikka masala blend</li>
+                                <li>Chicken cubes</li>
+                                <li>Yogurt</li>
+                                <li>Lemon juice</li>
+                                <li>Ginger-garlic paste</li>
+                                <li>Red chili powder</li>
+                                <li>Tikka masala</li>
                             </ul>
                         </td>
                         <td class="recipe-cell">
                             <ol>
-                                <li>Cut chicken into perfect, bite-sized cubes</li>
-                                <li>Create a luxurious marinade with yogurt and spices</li>
-                                <li>Let chicken rest and absorb flavors for 2 hours</li>
-                                <li>Thread marinated pieces onto metal skewers</li>
-                                <li>Grill over high heat for that perfect char</li>
-                                <li>Turn frequently for even, beautiful cooking</li>
-                                <li>Serve sizzling with warm naan and tangy chutney</li>
+                                <li>Cut chicken into cubes</li>
+                                <li>Make marinade with yogurt and spices</li>
+                                <li>Marinate chicken for 2 hours</li>
+                                <li>Thread onto skewers</li>
+                                <li>Grill over high heat</li>
+                                <li>Turn frequently</li>
+                                <li>Serve with naan and chutney</li>
                             </ol>
                         </td>
                     </tr>
                     
                     <tr>
-                        <td class="recipe-name">
-                            <span class="recipe-emoji">🍖</span>
-                            Namkeen Gosht
-                        </td>
+                        <td class="recipe-name">🍖 Namkeen Gosht</td>
                         <td><span class="cuisine">Pakistani</span></td>
                         <td><span class="time">20 mins</span></td>
                         <td><span class="time">60 mins</span></td>
                         <td class="ingredients-cell">
                             <ul>
-                                <li>Tender mutton pieces</li>
-                                <li>Cultured yogurt</li>
-                                <li>Golden fried onions</li>
-                                <li>Fresh ginger-garlic paste</li>
-                                <li>Aromatic whole spices</li>
-                                <li>Pink Himalayan salt</li>
+                                <li>Mutton pieces</li>
+                                <li>Yogurt</li>
+                                <li>Fried onions</li>
+                                <li>Ginger-garlic paste</li>
+                                <li>Whole spices</li>
+                                <li>Salt</li>
                             </ul>
                         </td>
                         <td class="recipe-cell">
                             <ol>
-                                <li>Fry onions until they turn deep golden brown</li>
-                                <li>Sear mutton pieces until beautifully caramelized</li>
-                                <li>Add fragrant ginger-garlic and whole spices</li>
-                                <li>Stir in creamy yogurt and precious salt</li>
-                                <li>Simmer gently on low heat for perfect tenderness</li>
-                                <li>Cook until meat falls off the bone</li>
-                                <li>Garnish with fresh cilantro and serve with pride</li>
+                                <li>Fry onions until golden</li>
+                                <li>Sear mutton pieces</li>
+                                <li>Add ginger-garlic and spices</li>
+                                <li>Add yogurt and salt</li>
+                                <li>Simmer on low heat</li>
+                                <li>Cook until tender</li>
+                                <li>Garnish and serve</li>
                             </ol>
                         </td>
                     </tr>
